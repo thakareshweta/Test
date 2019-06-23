@@ -7,5 +7,5 @@ Selenium Test Project
 4. Download Chromedriver for mac
 5. In your code, insert the chromedriver path here.
 ```System.setProperty("webdriver.chrome.driver","/Users/username/Downloads⁩/chromedriver");```
-6. Run the file as java application.
+6. Run purchaseTickets.java .
 
