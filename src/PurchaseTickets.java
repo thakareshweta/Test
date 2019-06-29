@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class PurchaseTickets {
 
     public static void main(String[] args) throws InterruptedException {
-        String url = "https://tickets.cricketworldcup.com/showProduct.html?idProduct=";
+        String url = "";
         int productId = 433;
         boolean areTicketsAvailable = false;
 
@@ -23,7 +23,7 @@ public class PurchaseTickets {
         WebDriver driver = new ChromeDriver();
         System.setProperty("webdriver.chrome.driver", "/Users/shweta.thakare/Downloads⁩/chromedriver");
 
-        driver.get("https://tickets.cricketworldcup.com/showProduct.html");
+        driver.get("");
         //Rather than hardcoded wait let user input "Y" in order to proceed
         Scanner scanner = new Scanner(System.in);
         System.out.println("Are you logged in ?");
@@ -34,7 +34,7 @@ public class PurchaseTickets {
 
         if (input.equals("Y")) {
             while (!areTicketsAvailable) {
-                driver.get("https://tickets.cricketworldcup.com/showProduct.html?idProduct=" + productId);
+                driver.get("" + productId);
                 ArrayList<WebElement> listOfTicketInputField = (ArrayList<WebElement>) driver.findElements(By.className("ticketQty"));
                 System.out.println(listOfTicketInputField.size());
                 if (listOfTicketInputField.size() > 0) {
